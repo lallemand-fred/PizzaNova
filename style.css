@@ -1,0 +1,343 @@
+
+/*------------------------------- Font ---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Variables */
+:root{
+    /* -----------------Font & Size-------------------- */
+    /* ---------------- 1rem = 16P -------------------- */
+    --font-size-Titre-Sec:1rem;
+    --font-size-H1:6em;
+    --font-size-H2:2em;
+    --font-size-H3:3em;
+    --font-size-H4:2em;
+    --font-size-P:1rem;
+    --font-family-Advent:'Advent Pro',sans-serif;
+    --font-family-Dancing:'Dancing Script',sans-serif;
+    /* -----------------white mode-------------------- */
+    --text-white: #000000;
+    --bg-white: #f0f0f0;
+    /* -------------------darck mode------------------ */
+    --text-darck: #e0d9d3;
+    --text-darck-sec01: #fffae1;
+    --bg-darck:  #14110e;
+    --bg-darck-sec01: #16120f;
+    --bg-darck-foot: #524A3A;
+    --text-darck-foot: #fffae1;
+    /* -------------------Chargement------------------ */
+    --font-size-chargemnt-Mobil:2.5em;
+    --font-size-chargemnt:6em;
+    --text-chargement01: #484848;
+    --text-chargement02: #fff900;
+    --bg-chargement:  #000;
+}
+/* --------------------------- Reset ------------------------- */
+*{
+    box-sizing: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+ul{
+    list-style: none;
+}
+a{
+    list-style: none;    
+    text-decoration: none;
+    color: var(--text-white);
+}
+/* ----------------------------Variables ----------------------*/
+:root{
+    --font-size:1.3rem;
+    --font-size-navbar:1.5rem;
+}
+.light-mode{
+    --navbar-color: #222;
+    --navbar-bg-color: #f0f0f0;
+}
+.dark-mode{
+    --navbar-color: #fffae1;
+    --navbar-bg-color: #000;
+    --navbar-bg-trans-color: #000000b7;
+}
+/* ---------------------Chargement----------------------------- */
+.loader{
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-chargement);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettre{
+    color: #484848;
+    font-size: var(--font-size-chargemnt);
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash{
+    0%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+    90%{
+        color: var(--text-chargement01);
+        text-shadow: none;
+    }
+    100%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay:0.1s ;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s ;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s ;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s ;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s ;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s ;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s ;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s ;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s ;
+}
+.lettre:nth-child(10){
+    animation-delay:1s ;
+}
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+/* -----------------------------Logo---------------------------- */
+.navbar__logo > a{
+    color: var(--navbar-color);
+    transition: 0.3s ease-in-out;
+}
+.navbar__logo > a:hover{
+    color: var(--navbar-color);
+    border-bottom: solid 1px var(--navbar-color);
+}
+.navbar__logo{
+    font-size: var(--font-size-navbar);
+    font-family: 'Dancing Script', sans-serif;
+    padding-left: 1.5rem;
+}
+/* ----------------------------BODY---------------------------- */
+body {
+    letter-spacing: 1px;
+    font-family: var(--font-family-Advent);
+    color: var(--text-white);
+}
+/* ----------------------------Navbar---------------------------- */
+nav{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 65px;
+    background: linear-gradient(to top, transparent, #14110e);
+    backdrop-filter: blur(5px);
+    /* background: var(--navbar-bg-color); */
+    color: var(--navbar-color);
+}
+.navbar__links{
+    display: flex;
+}
+.navbar__link{
+    padding: 0px 10px;
+}
+.navbar__link > a {
+    color: var(--navbar-color);
+    text-decoration: none;
+    font-size: var(--font-size);
+}
+.burger{
+    display: none;
+}
+/* -------------------PRESENTATION---------------------- */
+
+#presentation{
+    z-index: 4;
+    position: relative;
+    width: 100%;
+    background-color:var(--bg-darck-sec01);
+    padding: 10px 0px 30px 0px;
+}
+#textIntro{
+    text-align: center;
+    color: var(--text-darck-sec01);
+    padding: 0px 15%;
+}
+#textIntro H2{
+    font-size: var(--font-size-H2);
+    padding-bottom: 16px;
+}
+#textIntro p{
+    font-size: var(--font-size-P);
+}
+
+
+
+
+
+
+
+/*--------------------------------- resposive ------------------------*/
+@media screen and (max-width:767.98px){
+    .navbar__logo > a:hover{
+        color: var(--navbar-color);
+        border-bottom:  0px ;
+        letter-spacing:2px;
+        transition: 0.4s;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        height: 65px;
+        background: #14110ecb;
+        backdrop-filter: blur(0px);
+    }
+    .navbar__links{
+        z-index: 100;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column ;
+        justify-content: start;
+        align-items: start;
+        width: 0;
+        height:calc(100vh - 65px);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background: #14110ecb;
+        transition: all.5s ease-in-out;
+    }
+    .show-nav .navbar__links{
+        width: 100%;
+    }
+    .navbar__link{
+        transform: translateX(101%);
+    }
+    .show-nav .navbar__link{
+        transform: translateX(0);
+    }
+    .navbar__link > a {
+        display: block;
+        padding: 1rem;
+        font-size: var(--font-size-navbar);
+        transition: all .15s ease-in-out;
+    }
+    .navbar__link > a:hover {
+        /* padding-left: 2rem; */
+        letter-spacing:4px;
+    }
+    /*-------------------------- toglle menu ----------------------*/
+    .burger {
+        display: block;
+        position: relative;
+        padding-right: 70px;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background: transparent
+    
+    }
+    .bar{
+        display: block;
+        width: 45px;
+        height: 4px;
+        background: var(--navbar-color);
+        border-radius: 3px;
+        transition: all.5s ease-in-out;
+    }
+    .show-nav .bar{
+        width: 0;
+        background: transparent;
+    }
+    .bar::before, .bar::after{
+        content: "";
+        width: 45px;
+        height: 4px;
+        position: absolute;
+        left: 0px;
+        background: var(--navbar-color);
+        border-radius: 3px;
+        transition: all.5s ease-in-out;      
+    }
+    .bar::before{
+        transform: translateY(-12px);
+    }
+    .show-nav .bar::before{
+        transform: rotate(45deg);
+    }
+    .bar::after{
+        transform: translateY(12px);
+    }
+    .show-nav .bar::after{
+        transform: rotate(-45deg);
+    }
+    /* --------------------------- Animations ---------------------*/
+    .show-nav .first{
+        transition: all 1s ease-in-out;
+    }
+    .show-nav .second{
+        transition: all 1s ease-in-out;
+    }
+    .show-nav .third{
+        transition: all 1s ease-in-out;
+    }
+    .show-nav .four{
+        transition: all 1s ease-in-out;
+    }
+    .show-nav .five{
+        transition: all 1s ease-in-out;
+    }
+}
+
+
+/*----------------------------- small responsive ---------------------*/
+
+
+@media screen and (min-width:768px){
+    .navbar__link > a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 1px;
+        background: var(--navbar-color);
+        transition: width .4s;
+    }
+    .navbar__link:hover > a::after {
+        width: 100%;
+    }
+}
+
