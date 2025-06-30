@@ -149,6 +149,7 @@ body {
     letter-spacing: 1px;
     font-family: var(--font-family-Lato);
     color: var(--text-white);
+    background-color: var(--bg-darck);
 }
 /* ----------------------------Navbar---------------------------- */
 nav{
