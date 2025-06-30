@@ -1,6 +1,6 @@
 
 /*------------------------------- Font ---------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 html{
     scroll-behavior: smooth;
@@ -16,8 +16,8 @@ html{
     --font-size-H3:3em;
     --font-size-H4:2em;
     --font-size-P:1rem;
-    --font-family-Advent:'Advent Pro',sans-serif;
-    --font-family-Dancing:'Dancing Script',sans-serif;
+    --font-family-Lato:'Lato',sans-serif;
+    
     /* -----------------white mode-------------------- */
     --text-white: #000000;
     --bg-white: #f0f0f0;
@@ -141,13 +141,13 @@ a{
 }
 .navbar__logo{
     font-size: var(--font-size-navbar);
-    font-family: 'Dancing Script', sans-serif;
+    font-family: var(--font-family-Lato);
     padding-left: 1.5rem;
 }
 /* ----------------------------BODY---------------------------- */
 body {
     letter-spacing: 1px;
-    font-family: var(--font-family-Advent);
+    font-family: var(--font-family-Lato);
     color: var(--text-white);
 }
 /* ----------------------------Navbar---------------------------- */
@@ -182,7 +182,6 @@ nav{
     display: none;
 }
 /* -------------------PRESENTATION---------------------- */
-
 #presentation{
     z-index: 4;
     position: relative;
@@ -202,13 +201,6 @@ nav{
 #textIntro p{
     font-size: var(--font-size-P);
 }
-
-
-
-
-
-
-
 /*--------------------------------- resposive ------------------------*/
 @media screen and (max-width:767.98px){
     .navbar__logo > a:hover{
@@ -322,11 +314,7 @@ nav{
         transition: all 1s ease-in-out;
     }
 }
-
-
 /*----------------------------- small responsive ---------------------*/
-
-
 @media screen and (min-width:768px){
     .navbar__link > a::after {
         display: block;
