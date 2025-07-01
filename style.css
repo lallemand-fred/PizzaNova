@@ -242,7 +242,7 @@ position: relative;
     }
     .navbar__links{
         z-index: 100;
-        overflow: hidden;
+        /* overflow: hidden; */
         display: flex;
         flex-direction: column ;
         justify-content: start;
@@ -254,7 +254,7 @@ position: relative;
         right: 0;
         background: #14110ecb;
         transition: all.5s ease-in-out;
-        /* border: solid red; */
+        border: solid red;
     }
     .show-nav .navbar__links{
         width: 100%;
