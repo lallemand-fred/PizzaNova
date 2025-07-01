@@ -233,7 +233,7 @@ position: relative;
     .navbar{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 10px;
         height: 65px;
         background: #14110ecb;
@@ -250,10 +250,10 @@ position: relative;
         height:calc(100vh - 65px);
         position: absolute;
         top: 65px;
-        left: 0;
-        /* right: 0; */
+        right: 0;
         background: #14110ecb;
         transition: all.5s ease-in-out;
+        /* border: solid red; */
     }
     .show-nav .navbar__links{
         width: 100%;
@@ -282,8 +282,7 @@ position: relative;
         width: 45px;
         height: 45px;
         border: none;
-        background: transparent
-    
+        background: transparent;        
     }
     .bar{
         display: block;
